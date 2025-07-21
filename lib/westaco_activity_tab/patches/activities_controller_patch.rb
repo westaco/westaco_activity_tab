@@ -37,7 +37,7 @@ module WestacoActivityTab
               @query.add_filter 'author_id', '=', [params[:user_id]]
             end
 
-            @query.add_filter 'updated_on', '><', [(@date_from - 1).to_s, (@date_to - 1).to_s(:db)]
+            @query.add_filter 'updated_on', '><', [(@date_from - 1).to_s, (@date_to - 1).to_fs(:db)]
 
             @activity = Redmine::Activity::Fetcher.new(
               User.current,

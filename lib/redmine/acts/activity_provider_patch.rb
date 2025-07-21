@@ -15,7 +15,7 @@ module Redmine
             elsif scope.respond_to?(:call)
               scope = scope.call
             else
-              ActiveSupport::Deprecation.warn "acts_as_activity_provider with implicit :scope option is deprecated. Please pass a scope on the #{self.name} as a proc."
+              logger.warn "acts_as_activity_provider with implicit :scope option is deprecated. Please pass a scope on the #{self.name} as a proc."
             end
 
             if from && to
@@ -37,7 +37,7 @@ module Redmine
             elsif respond_to?(:visible)
               scope = scope.visible(user, options)
             else
-              ActiveSupport::Deprecation.warn "acts_as_activity_provider with implicit :permission option is deprecated. Add a visible scope to the #{self.name} model or use explicit :permission option."
+              logger.warn "acts_as_activity_provider with implicit :permission option is deprecated. Add a visible scope to the #{self.name} model or use explicit :permission option."
               scope = scope.where(Project.allowed_to_condition(user, "view_#{self.name.underscore.pluralize}".to_sym, options))
             end
 
