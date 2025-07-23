@@ -3,6 +3,7 @@ require File.dirname(__FILE__) + '/lib/redmine/acts/activity_provider_patch.rb'
 require File.dirname(__FILE__) + '/lib/westaco_activity_tab/patches/activities_controller_patch.rb'
 
 Redmine::Plugin.register :westaco_activity_tab do
+  requires_redmine version_or_higher: '6.0.0'
   name 'Westaco Activity Tab plugin'
   author 'Yanto Daryanto'
   description 'This is a plugin for adding enhanced filters to the activity tab in Redmine'
