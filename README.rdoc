@@ -3,3 +3,13 @@
 Added the possibility to define new statuses for Versions.
 Added "Total time" in "Roadmap section - calculation of Version duration based on statuses (since opening the version until at the current time). Other improvements.
 Development sponsored by *Westaco* and executed by *Yanto Daryanto* .
+
+== Installation
+
+This plugin relies on Bundler to manage dependencies. After cloning the
+repository run:
+
+  bundle install
+
+Bundler will use the provided +Gemfile+ to install Redmine 6 and other
+dependencies. Ruby 3.2 or newer is required.
