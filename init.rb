@@ -1,6 +1,6 @@
-require File.dirname(__FILE__) + '/lib/redmine/activity/fetcher_patch.rb'
-require File.dirname(__FILE__) + '/lib/redmine/acts/activity_provider_patch.rb'
-require File.dirname(__FILE__) + '/lib/westaco_activity_tab/patches/activities_controller_patch.rb'
+require_relative 'lib/redmine/activity/fetcher_patch'
+require_relative 'lib/redmine/acts/activity_provider_patch'
+require_relative 'lib/westaco_activity_tab/patches/activities_controller_patch'
 
 Redmine::Plugin.register :westaco_activity_tab do
   name 'Westaco Activity Tab plugin'
