@@ -56,7 +56,7 @@ module WestacoActivityTab
               end
             else
               if @author.nil?
-                scope = pref.activity_scope & @activity.event_types
+                scope = Array(pref.activity_scope) & @activity.event_types
                 @activity.scope = scope.present? ? scope : :default
               else
                 @activity.scope = :all
