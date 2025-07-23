@@ -45,7 +45,6 @@ class ActivityQuery < Query
     add_available_filter "description", :type => :text
     add_available_filter "notes", :type => :text
     add_available_filter "created_on", :type => :date_past
-    add_available_filter "updated_on", :type => :date_past
     add_available_filter "updated_on", :type => :date_past, :name => l(:label_activity_date)
     add_available_filter "closed_on", :type => :date_past
     add_available_filter "start_date", :type => :date
