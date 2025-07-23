@@ -6,7 +6,7 @@ module Redmine
           # Returns events of type event_type visible by user that occurred between from and to
           def find_events_with_query(event_type, user, from, to, options)
             provider_options = activity_provider_options[event_type]
-            raise "#{self.name} can not provide #{event_type} events." if provider_options.nil?
+            raise "#{self.name} cannot provide #{event_type} events." if provider_options.nil?
             
             scope = provider_options[:scope]
 
